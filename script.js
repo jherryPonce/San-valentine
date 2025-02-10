@@ -1,5 +1,4 @@
 const button = document.getElementById("movableButton");
-button.addEventListener("touchstart", moveButton); // Para móviles
 
 button.addEventListener("mouseenter", () => {
     const maxX = window.innerWidth - button.offsetWidth;
@@ -16,25 +15,10 @@ button.addEventListener("mouseenter", () => {
   
 });
 
-button.addEventListener("click",()=>{
-
-    alert('AL MENOS LO INTENTE');
-})
-
-
-// const path = window.location.pathname; 
-// const nombreSPLIT = path.split("/")[1] || "AMOR"; 
-// const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
-// const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
-
-// document.getElementById("pregunta").textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
-
 
 const path = window.location.pathname; 
 
-
 const nombreSPLIT = path.split("/")[1] || "AMOR"; 
-
 
 const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
 const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
@@ -52,7 +36,8 @@ window.addEventListener("click", () => {
 }, { once: true }); // Solo ejecuta esto una vez
 
 
-const moveButton = () => {
+
+button.addEventListener("touchstart", () => {
     const maxX = window.innerWidth - button.offsetWidth;
     const maxY = window.innerHeight - button.offsetHeight;
 
@@ -63,4 +48,10 @@ const moveButton = () => {
     button.style.left = `${newX}px`;
     button.style.top = `${newY}px`;
 
-  };
+});
+
+
+button.addEventListener("click",()=>{
+
+    alert('AL MENOS LO INTENTE');
+})
