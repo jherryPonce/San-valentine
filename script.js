@@ -21,12 +21,28 @@ button.addEventListener("click",()=>{
 })
 
 
+// const path = window.location.pathname; 
+// const nombreSPLIT = path.split("/")[1] || "AMOR"; 
+// const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
+// const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
+
+// document.getElementById("pregunta").textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
+
+
 const path = window.location.pathname; 
+
+// Asegurarse de que hay un nombre en la URL o usar un valor predeterminado
 const nombreSPLIT = path.split("/")[1] || "AMOR"; 
+
+// Decodificar el nombre, manejar guiones y formatear
 const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
 const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
 
-document.getElementById("pregunta").textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
+// Actualizar el texto en la página
+const preguntaElement = document.getElementById("pregunta");
+if (preguntaElement) {
+  preguntaElement.textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
+}
 
 
 window.addEventListener("click", () => {
