@@ -1,3 +1,17 @@
+const path = window.location.pathname; 
+
+const nombreSPLIT = path.split("/")[1] || "AMOR"; 
+
+const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
+const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1).toUpperCase();
+
+
+
+const preguntaElement = document.getElementById("pregunta");
+if (preguntaElement) {
+  preguntaElement.textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
+}
+
 const button = document.getElementById("movableButton");
 
 button.addEventListener("mouseenter", () => {
@@ -11,30 +25,7 @@ button.addEventListener("mouseenter", () => {
     button.style.left = `${newX}px`;
     button.style.top = `${newY}px`;
 
-
-  
 });
-
-
-const path = window.location.pathname; 
-
-const nombreSPLIT = path.split("/")[1] || "AMOR"; 
-
-const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
-const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
-
-
-const preguntaElement = document.getElementById("pregunta");
-if (preguntaElement) {
-  preguntaElement.textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
-}
-
-
-window.addEventListener("click", () => {
-    const audio = document.getElementById("miAudio");
-    audio.muted = false;
-}, { once: true }); // Solo ejecuta esto una vez
-
 
 
 button.addEventListener("touchstart", () => {
@@ -53,5 +44,24 @@ button.addEventListener("touchstart", () => {
 
 button.addEventListener("click",()=>{
 
-    alert('AL MENOS LO INTENTE');
+    button.textContent = 'MEJOR VUELVE MAÑANA'
 })
+
+
+const audio = document.getElementById("miAudio");
+
+// Función para reproducir el audio al interactuar con la página
+const enableAudio = () => {
+  audio.play().catch((error) => {
+    console.warn("El navegador bloqueó el audio automático:", error);
+  });
+};
+
+// Detecta la primera interacción del usuario
+const enableAudioOnInteraction = () => {
+  document.body.addEventListener("click", enableAudio, { once: true });
+  document.body.addEventListener("touchstart", enableAudio, { once: true });
+};
+
+// Habilita la reproducción en la primera interacción
+enableAudioOnInteraction();
