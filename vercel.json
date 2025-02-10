@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/:nombre", "destination": "/index.html" }
+    ]
+  }
+  
