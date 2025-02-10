@@ -22,11 +22,11 @@ button.addEventListener("click",()=>{
 
 
 const path = window.location.pathname; 
-const nombre = path.split("/")[1] || "AMOR"; 
-const nombreFormateado = decodeURIComponent(nombre).replace(/-/g, " ");
-const nombreCapitalizado = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
+const nombreSPLIT = path.split("/")[1] || "AMOR"; 
+const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
+const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
 
-document.getElementById("pregunta").textContent = `¿${nombreCapitalizado}, QUIERES SER MI SAN VALENTÍN?`;
+document.getElementById("pregunta").textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
 
 
 window.addEventListener("click", () => {
