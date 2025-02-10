@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>San Valentin</title>
+  </head>
+  <body>
+
+    <audio id="miAudio" autoplay loop muted>
+      <source src="/src/baileinolvidable.mp3" type="audio/mpeg">
+  </audio>
+
+    <img
+      id="gifContainerImg"
+      src="https://encoded.pe/sanvalentin/mocha.gif"
+      alt="Ositos enamorados"
+    />
+
+    <h1  id="pregunta">¿QUIERES SER MI SAN VALENTIN?</h1>
+
+    <div class="groupButton">
+      <section class="blockButton">
+        <button id="fixedButton" aria-label="Aceptar invitación">Si, me encantaria</button>
+      </section>
+      <section class="blockButton">
+        <button id="movableButton" aria-label="Rechazar invitación">No, paso wey</button>
+      </section>
+    </div>
+    
+  </body>
+
+  <script src="script.js"></script>
+</html>
