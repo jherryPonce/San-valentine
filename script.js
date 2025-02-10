@@ -1,10 +1,41 @@
 const button = document.getElementById("movableButton");
-button.addEventListener("touchstart", moveButton); 
-button.addEventListener("mouseenter", moveButton); 
+button.addEventListener("touchstart", moveButton); // Para móviles
+
+button.addEventListener("mouseenter", () => {
+    const maxX = window.innerWidth - button.offsetWidth;
+    const maxY = window.innerHeight - button.offsetHeight;
+
+    const newX = Math.random() * maxX;
+    const newY = Math.random() * maxY;
+
+    button.style.position = "absolute";
+    button.style.left = `${newX}px`;
+    button.style.top = `${newY}px`;
+
+
+  
+});
+
+button.addEventListener("click",()=>{
+
+    alert('AL MENOS LO INTENTE');
+})
+
+
+// const path = window.location.pathname; 
+// const nombreSPLIT = path.split("/")[1] || "AMOR"; 
+// const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
+// const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
+
+// document.getElementById("pregunta").textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
 
 
 const path = window.location.pathname; 
+
+
 const nombreSPLIT = path.split("/")[1] || "AMOR"; 
+
+
 const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
 const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1);
 
@@ -33,5 +64,3 @@ const moveButton = () => {
     button.style.top = `${newY}px`;
 
   };
-
-  
