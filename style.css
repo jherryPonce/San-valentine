@@ -11,6 +11,10 @@ body {
   flex-direction: column;
 }
 
+.hidden {
+  display: none;
+}
+
 #portada{
   background-image: url("./img/sanvalentinportada.png");
   background-repeat: no-repeat;

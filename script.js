@@ -84,18 +84,6 @@ enableAudioOnInteraction();
 
     // Obtener la URL actual del sitio
     const baseUrl = window.location.origin;
-    const enlaceFinal = `${baseUrl}/${nombreFormateado}`;
-    const nombreSPLIT = path.split("/")[1]; // Obtiene la segunda parte de la URL (después de "/")
-    
-    if (nombreSPLIT) {
-
-
-      // Cambia la visibilidad de los elementos
-      document.getElementById("portada").style.display = "none";
-      document.getElementById("contenedor").style.display = "block";
-
-
-    }
 
     // Mostrar loader
     document.getElementById("loader").style.display = "block";
@@ -117,3 +105,15 @@ enableAudioOnInteraction();
       window.open(whatsappUrl, "_blank");
     });
   });
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const path = window.location.pathname;
+    const nombreSPLIT = path.split("/")[1];
+
+    if (nombreSPLIT) {
+        document.getElementById("portada").classList.add("hidden");
+        document.getElementById("contenedor").classList.remove("hidden");
+    }
+});
