@@ -12,7 +12,7 @@ body {
 
 /* Ocultar elementos */
 .hidden {
-  display: none;
+  display: none  !important; 
 }
 
 /* 🔴 Portada */
@@ -58,6 +58,10 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 400px;
+  background-image: url("./img/sanvalentinportada.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card-header {
@@ -83,41 +87,8 @@ button#generarEnlace:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*/----------------------------------------
-/* 💖 Contenedor Principal */
+/* Contenedor Principal */
 #contenedor {
   width: 100%;
   height: 100vh;
