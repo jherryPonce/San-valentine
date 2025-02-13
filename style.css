@@ -62,6 +62,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .card-header {
@@ -80,12 +81,17 @@ button#generarEnlace {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 button#generarEnlace:hover {
   background-color: #e63950;
 }
 
+.form-group>label{
+  color: black;
+  font-weight: bold;
+}
 
 /*/----------------------------------------
 /* Contenedor Principal */
