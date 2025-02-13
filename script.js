@@ -6,7 +6,7 @@ const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
 const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1).toUpperCase();
 
 
-setInterval(generarCorazones, 1000);
+
 const preguntaElement = document.getElementById("pregunta");
 if (preguntaElement) {
   preguntaElement.textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
@@ -138,6 +138,8 @@ const enableAudioOnInteraction = () => {
         document.getElementById("portada").classList.add("hidden");
         document.getElementById("contenedor").classList.remove("hidden");
         document.getElementById("contenedor").style.display = "flex";
+    }else{
+      setInterval(generarCorazones, 1000);
     }
 });
 
