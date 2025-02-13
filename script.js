@@ -84,7 +84,7 @@ enableAudioOnInteraction();
 
     // Obtener la URL actual del sitio
     const baseUrl = window.location.origin;
-
+    const enlaceFinal = `${baseUrl}/${nombreFormateado}`;
     // Mostrar loader
     document.getElementById("loader").style.display = "block";
     
