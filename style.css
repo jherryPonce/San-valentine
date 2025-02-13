@@ -51,7 +51,7 @@ body {
 }
 
 /* 💌 Tarjeta de bienvenida */
-.card {
+.card-general {
   background: white;
   padding: 20px;
   border-radius: 15px;
