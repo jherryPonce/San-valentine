@@ -85,8 +85,10 @@ enableAudioOnInteraction();
     // Obtener la URL actual del sitio
     const baseUrl = window.location.origin;
     const enlaceFinal = `${baseUrl}/${nombreFormateado}`;
+    const nombreSPLIT = path.split("/")[1]; // Obtiene la segunda parte de la URL (después de "/")
+    
+    if (nombreSPLIT) {
 
-    if (nombreFormateado) {
 
       // Cambia la visibilidad de los elementos
       document.getElementById("portada").style.display = "none";
