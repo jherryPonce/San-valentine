@@ -69,7 +69,7 @@ const enableAudioOnInteraction = () => {
 };
 
 
-  //parte 2
+  //PORTADA
 
   document.getElementById("generarEnlace").addEventListener("click", function () {
     const nombre = document.getElementById("nombreInput").value.trim();
@@ -122,12 +122,9 @@ const enableAudioOnInteraction = () => {
 
 
 
-//acepto
+// boton acepto
 
 document.getElementById("fixedButton").addEventListener("click", function () {
-
-
-
 
   enableAudioOnInteraction();
 
