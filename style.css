@@ -51,20 +51,23 @@ body {
 }
 
 /* 💌 Tarjeta de bienvenida */
-.card-general {
+.card {
   background: white;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 400px;
+
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.card-general{
   background-image: url("./img/sanvalentinportada.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: drop-shadow(2px 4px 6px black);
 }
-
 .card-header {
   font-size: 1.5rem;
   font-weight: bold;
