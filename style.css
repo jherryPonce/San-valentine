@@ -37,7 +37,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateY(-200px) scale(1.2);
+    transform: translateY(-100px) scale(1.2);
     opacity: 0;
   }
 }
@@ -58,7 +58,6 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 400px;
-
   filter: drop-shadow(2px 4px 6px black);
 }
 
@@ -94,6 +93,38 @@ button#generarEnlace:hover {
 .form-group>label{
   color: black;
   font-weight: bold;
+}
+
+/*  RESPONSIVE  */
+
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px;
+  }
+
+  #portada {
+    height: auto;
+    padding: 20px;
+  }
+
+  .card {
+    width: 95%;
+    max-width: 350px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  #portada {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 40%;
+  }
 }
 
 /*/----------------------------------------
