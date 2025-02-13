@@ -22,7 +22,6 @@ body {
   background-size: contain;
   height: 100vh;
   width: 100%;
-  display: block;
 }
 
 #contenedor{
@@ -34,7 +33,6 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  display: none;
   filter: saturate(3);
 }
 
