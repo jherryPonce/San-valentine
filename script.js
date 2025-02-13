@@ -6,7 +6,7 @@ const nombreFormateado = decodeURIComponent(nombreSPLIT).replace(/-/g, " ");
 const nombre = nombreFormateado.charAt(0).toUpperCase() + nombreFormateado.slice(1).toUpperCase();
 
 
-
+setInterval(generarCorazones, 1000);
 const preguntaElement = document.getElementById("pregunta");
 if (preguntaElement) {
   preguntaElement.textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
@@ -120,7 +120,21 @@ const enableAudioOnInteraction = () => {
     }
 });
 
+function generarCorazones() {
+  for (let i = 0; i < 10; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.top = "100vh";
+    heart.style.animationDuration = Math.random() * 2 + 2 + "s";
+    document.body.appendChild(heart);
 
+    setTimeout(() => {
+      heart.remove();
+    }, 13000);
+  }
+}
 
 // boton acepto
 
@@ -139,19 +153,7 @@ document.getElementById("fixedButton").addEventListener("click", function () {
   mensaje.style.display = "block";
 
   // Generar corazones flotando
-  for (let i = 0; i < 50; i++) {
-    let heart = document.createElement("div");
-    heart.innerHTML = "❤️";
-    heart.classList.add("heart");
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = "100vh";
-    heart.style.animationDuration = Math.random() * 2 + 2 + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 18000);
-  }
+  setInterval(generarCorazones, 1000);
 
   document.getElementById("movableButton").classList.add("hidden");
   document.getElementById("fixedButton").classList.add("hidden");

@@ -17,15 +17,106 @@ body {
 
 /* 🔴 Portada */
 #portada {
-  background-image: url("./img/sanvalentinportada.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100%;
-
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4); /* Degradado romántico */
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
+/* 💖 Animación de corazones flotando */
+@keyframes floatingHearts {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  color: #ff4d6d;
+  opacity: 0;
+  animation: floatingHearts 3s linear infinite;
+}
+
+/* 💌 Tarjeta de bienvenida */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4d6d;
+}
+
+button#generarEnlace {
+  background-color: #ff4d6d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button#generarEnlace:hover {
+  background-color: #e63950;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/----------------------------------------
 /* 💖 Contenedor Principal */
 #contenedor {
   width: 100%;
