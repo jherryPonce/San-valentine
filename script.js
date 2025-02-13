@@ -79,33 +79,33 @@ enableAudioOnInteraction();
       return;
     }
 
-    // Formatear nombre para URL
-    const nombreFormateado = encodeURIComponent(nombre.replace(/\s+/g, "-"));
+   // Formatear nombre para URL
+   const nombreFormateado = encodeURIComponent(nombre.replace(/\s+/g, "-"));
 
-    // Obtener la URL actual del sitio
-    const baseUrl = window.location.origin;
-    const enlaceFinal = `${baseUrl}/${nombreFormateado}`;
-    // Mostrar loader
-    document.getElementById("loader").style.display = "block";
-    
-    setTimeout(() => {
-      // Ocultar loader y mostrar el enlace generado
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("enlaceCard").style.display = "block";
-      
-      const enlaceElemento = document.getElementById("enlaceGenerado");
-      enlaceElemento.href = enlaceFinal;
-      enlaceElemento.textContent = enlaceFinal;
-    }, 1500); // Simulación de carga
+   // Obtener la URL actual del sitio
+   const baseUrl = window.location.origin;
+   const enlaceFinal = `${baseUrl}/${nombreFormateado}`;
 
-    // Enviar por WhatsApp
-    document.getElementById("enviarWhatsApp").addEventListener("click", function () {
-      const mensaje = `Porque eres muy especial para mi te comparto lo siguiente: ${enlaceFinal}`;
-      const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-      window.open(whatsappUrl, "_blank");
-    });
-  });
+   // Mostrar loader
+   document.getElementById("loader").style.display = "block";
+   
+   setTimeout(() => {
+     // Ocultar loader y mostrar el enlace generado
+     document.getElementById("loader").style.display = "none";
+     document.getElementById("enlaceCard").style.display = "block";
+     
+     const enlaceElemento = document.getElementById("enlaceGenerado");
+     enlaceElemento.href = enlaceFinal;
+     enlaceElemento.textContent = enlaceFinal;
+   }, 1500); // Simulación de carga
 
+   // Enviar por WhatsApp
+   document.getElementById("enviarWhatsApp").addEventListener("click", function () {
+     const mensaje = `¡Hola! Te comparto este enlace especial: ${enlaceFinal}`;
+     const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+     window.open(whatsappUrl, "_blank");
+   });
+ });
 
 
   document.addEventListener("DOMContentLoaded", () => {
