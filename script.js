@@ -69,8 +69,6 @@ const enableAudioOnInteraction = () => {
 };
 
 
-
-
   //parte 2
 
   document.getElementById("generarEnlace").addEventListener("click", function () {
@@ -120,4 +118,46 @@ const enableAudioOnInteraction = () => {
         document.getElementById("contenedor").classList.remove("hidden");
         document.getElementById("contenedor").style.display = "flex";
     }
+});
+
+
+
+//acepto
+
+document.getElementById("fixedButton").addEventListener("click", function () {
+
+
+
+
+  enableAudioOnInteraction();
+
+  // Cambiar el mensaje principal
+  document.getElementById("pregunta").innerText = "¡Gracias por ser mi San Valentín! ❤️";
+  
+  // Mostrar mensaje de amor
+  let mensaje = document.createElement("h2");
+  mensaje.id = "mensajeAmor";
+  mensaje.innerText = "Eres lo mejor que me ha pasado 💖";
+  document.getElementById("contenedor-body").appendChild(mensaje);
+  mensaje.style.display = "block";
+
+  // Generar corazones flotando
+  for (let i = 0; i < 50; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.top = "100vh";
+    heart.style.animationDuration = Math.random() * 2 + 2 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 18000);
+  }
+
+  document.getElementById("movableButton").classList.add("hidden");
+  document.getElementById("fixedButton").classList.add("hidden");
+
+
 });

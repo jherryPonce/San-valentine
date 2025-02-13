@@ -90,6 +90,7 @@ body {
 #movableButton {
   background-color: rgb(255, 8, 0);
   transition: transform 0.3s ease-in-out;
+  color: white;
 }
 
 #fixedButton {
@@ -144,4 +145,48 @@ audio {
     font-size: 14px;
     padding: 10px;
   }
+}
+
+
+/* ❤️ Animación de corazones flotando */
+@keyframes floatingHearts {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* 🎇 Mensaje de amor */
+#mensajeAmor {
+  display: none;
+  font-size: 2rem;
+  color: #ff4081;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* ✨ Animación de aparición */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 💖 Estilos para corazones flotantes */
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 24px;
+  opacity: 0;
+  animation: floatingHearts 3s linear forwards;
 }
