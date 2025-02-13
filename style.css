@@ -4,17 +4,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
+  color: rgb(0, 0, 0);
+
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+}
+
+#portada{
+  background-image: url("./img/sanvalentinportada.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 100vh;
+  width: 100%;
+}
+
+#contenedor{
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px #fff;
   background-image: url("./img/sanvalentin.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;
+  display: none;
   filter: saturate(3);
-  color: rgb(0, 0, 0);
-  font-size: large;
-  font-weight: bold;
-  text-shadow: 2px 2px 10px #fff;
-  font-family: Arial, sans-serif;
-  flex-direction: column;
 }
 
 .groupButton {
