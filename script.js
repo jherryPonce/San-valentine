@@ -73,6 +73,7 @@ function cambiarTexto() {
     contador++;
   } else {
     button.innerText = "Ok... 💔"; 
+    contador = 0
   }
 }
 

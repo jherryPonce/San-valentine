@@ -203,7 +203,7 @@ button#generarEnlace:hover {
 }
 
 #movableButton {
-  background-color: rgb(255, 8, 0);
+  background-color: rgb(224, 84, 80);
   transition: transform 0.3s ease-in-out;
   color: white;
 }
