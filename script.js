@@ -67,8 +67,6 @@ const enableAudioOnInteraction = () => {
 enableAudioOnInteraction();
 
 
-const generador = document.getElementById("generarEnlace");
-
   //parte 2
 
 
@@ -88,6 +86,15 @@ const generador = document.getElementById("generarEnlace");
     const baseUrl = window.location.origin;
     const enlaceFinal = `${baseUrl}/${nombreFormateado}`;
 
+    if (nombreFormateado) {
+
+      // Cambia la visibilidad de los elementos
+      document.getElementById("portada").style.display = "none";
+      document.getElementById("contenedor").style.display = "block";
+
+
+    }
+
     // Mostrar loader
     document.getElementById("loader").style.display = "block";
     
@@ -103,7 +110,7 @@ const generador = document.getElementById("generarEnlace");
 
     // Enviar por WhatsApp
     document.getElementById("enviarWhatsApp").addEventListener("click", function () {
-      const mensaje = `¡Hola! Te comparto este enlace especial: ${enlaceFinal}`;
+      const mensaje = `Porque eres muy especial para mi te comparto lo siguiente: ${enlaceFinal}`;
       const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
       window.open(whatsappUrl, "_blank");
     });
