@@ -12,6 +12,22 @@ if (preguntaElement) {
   preguntaElement.textContent = `¿${nombre}, QUIERES SER MI SAN VALENTÍN?`;
 }
 
+
+//mensajes de rechazo
+const mensajes = [
+  "¿Segura? 💔",
+  "Piénsalo bien... 🥺",
+  "Me romperás el corazón 😭",
+  "Dame una oportunidad 😢",
+  "El destino nos juntó ❤️",
+  "Yo sé que en el fondo dices sí 😏",
+  "¡No te hagas! Sabes que quieres 🥰",
+  "Voy a insistir hasta que digas sí 🤭",
+];
+
+let contador = 0;
+
+//boton movible no wey
 const button = document.getElementById("movableButton");
 
 button.addEventListener("mouseenter", () => {
@@ -49,7 +65,12 @@ enableAudioOnInteraction();
 
 button.addEventListener("click",()=>{
 
-    button.textContent = 'MEJOR VUELVE MAÑANA'
+  if (contador < mensajes.length) {
+    button.innerText = mensajes[contador]; // Cambia el texto del botón
+    contador++;
+  } else {
+    button.innerText = "Ok... 💔"; // Última opción si sigue rechazando
+  }
 })
 
 
