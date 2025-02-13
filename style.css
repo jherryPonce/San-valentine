@@ -19,7 +19,7 @@ body {
 #portada {
   background-image: url("./img/sanvalentinportada.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: contain;
   height: 100vh;
   width: 100%;
