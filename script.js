@@ -123,11 +123,13 @@ const enableAudioOnInteraction = () => {
 
    // Enviar por WhatsApp
    document.getElementById("enviarWhatsApp").addEventListener("click", function () {
-     const mensaje = `¡Hola! Te comparto este enlace especial: ${enlaceFinal}`;
-     const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-     window.open(whatsappUrl, "_blank");
-   });
+    const mensaje = `💖 ¡Hola, ${nombreFormateado} ! 💖\n\n✨ Quiero compartir contigo algo muy especial ✨\n\n🌹 Este enlace está lleno de amor y cariño, creado solo para ti: ${enlaceFinal} 💌\n\n😍 Espero que te guste tanto como me gustas tú. ❤️`;
+    const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(whatsappUrl, "_blank");
+  });
+  
  });
+
 
 
   document.addEventListener("DOMContentLoaded", () => {
