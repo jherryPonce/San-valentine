@@ -25,6 +25,9 @@ button.addEventListener("mouseenter", () => {
     button.style.left = `${newX}px`;
     button.style.top = `${newY}px`;
 
+    // Habilita la reproducción en la primera interacción
+enableAudioOnInteraction();
+
 });
 
 
@@ -38,6 +41,8 @@ button.addEventListener("touchstart", () => {
     button.style.position = "absolute";
     button.style.left = `${newX}px`;
     button.style.top = `${newY}px`;
+    // Habilita la reproducción en la primera interacción
+enableAudioOnInteraction();
 
 });
 
@@ -63,12 +68,10 @@ const enableAudioOnInteraction = () => {
   document.body.addEventListener("touchstart", enableAudio, { once: true });
 };
 
-// Habilita la reproducción en la primera interacción
-enableAudioOnInteraction();
+
 
 
   //parte 2
-
 
   document.getElementById("generarEnlace").addEventListener("click", function () {
     const nombre = document.getElementById("nombreInput").value.trim();
@@ -115,5 +118,6 @@ enableAudioOnInteraction();
     if (nombreSPLIT) {
         document.getElementById("portada").classList.add("hidden");
         document.getElementById("contenedor").classList.remove("hidden");
+        document.getElementById("contenedor").style.display = "flex";
     }
 });

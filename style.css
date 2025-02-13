@@ -1,10 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-
- 
   color: rgb(0, 0, 0);
-
   font-family: Arial, sans-serif;
   flex-direction: column;
 }
@@ -24,7 +21,7 @@ body {
 
 #contenedor{
   width: 100%;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   height: 100vh;
