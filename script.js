@@ -63,16 +63,18 @@ enableAudioOnInteraction();
 });
 
 
-button.addEventListener("click",()=>{
 
+button.addEventListener("click", cambiarTexto);
+button.addEventListener("touchstart", cambiarTexto); 
+
+function cambiarTexto() {
   if (contador < mensajes.length) {
-    button.innerText = mensajes[contador]; // Cambia el texto del botón
+    button.innerText = mensajes[contador]; 
     contador++;
   } else {
-    button.innerText = "Ok... 💔"; // Última opción si sigue rechazando
+    button.innerText = "Ok... 💔"; 
   }
-})
-
+}
 
 const audio = document.getElementById("miAudio");
 
