@@ -268,7 +268,7 @@ audio {
 /* ❤️ Animación de corazones flotando */
 @keyframes floatingHearts {
   0% {
-    transform: translateY(0) scale(0.8);
+    transform: translateY(-50) scale(0.8);
     opacity: 1;
   }
   100% {
