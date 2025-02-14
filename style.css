@@ -47,6 +47,7 @@ body {
   font-size: 24px;
   color: #ff4d6d;
   opacity: 0;
+  top: 95vh;
   animation: floatingHearts 3s linear infinite;
 }
 
