@@ -265,17 +265,6 @@ audio {
 }
 
 
-/* ❤️ Animación de corazones flotando */
-@keyframes floatingHearts {
-  0% {
-    transform: translateY(+10) scale(0.8);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100px) scale(1.2);
-    opacity: 0;
-  }
-}
 
 /* 🎇 Mensaje de amor */
 #mensajeAmor {
