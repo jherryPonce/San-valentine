@@ -49,6 +49,7 @@ body {
   opacity: 0;
   top: 95vh !important;
   animation: floatingHearts 3s linear infinite;
+  max-width: 90%;
 }
 
 /* 💌 Tarjeta de bienvenida */
