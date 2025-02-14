@@ -67,6 +67,7 @@ body {
   background-position: center;
   background-size: cover;
   width: 90% !important;
+  height: 90%;
 }
 .card-header {
   font-size: 1.5rem;

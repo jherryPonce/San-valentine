@@ -92,19 +92,21 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
   const nombre = document.getElementById("nombreInput").value.trim();
   const numero = document.getElementById("numeroInput").value.trim();
 
-  numero = numero.replace(/\D/g, "");  
-
-  if (numero.startsWith("0")) {
-    numero = numero.substring(1); // Elimina el primer "0"
-} else if (numero.startsWith("+")) {
-    numero = numero.substring(1); // Elimina el "+"
-}
-
   if (nombre === "" || numero === "") {
     alert("Por favor, ingresa el nombre y el número de WhatsApp.");
     return;
   }
 
+
+  numero = numero.replace(/\D/g, "");
+
+  if (numero.startsWith("0")) {
+    numero = numero.substring(1); // Elimina el primer "0"
+  } else if (numero.startsWith("+")) {
+    numero = numero.substring(1); // Elimina el "+"
+  }
+
+ 
   // Formatear nombre para URL
   const nombreFormateado = encodeURIComponent(nombre.replace(/\s+/g, "-"));
 
@@ -137,10 +139,7 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
 
       nombre.reset();
       numero.reset();
-
     });
-
-
 });
 
 document.addEventListener("DOMContentLoaded", () => {
