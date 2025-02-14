@@ -49,7 +49,7 @@ body {
   opacity: 0;
   top: 95vh !important;
   animation: floatingHearts 3s linear infinite;
-  left: 80vw;
+  left: 80vw !important;
 }
 
 /* 💌 Tarjeta de bienvenida */
