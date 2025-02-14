@@ -50,6 +50,7 @@ body {
   top: 95vh !important;
   animation: floatingHearts 3s linear infinite;
   max-width: 90%;
+  width: 90%;
 }
 
 /* 💌 Tarjeta de bienvenida */
