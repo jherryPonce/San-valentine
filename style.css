@@ -33,7 +33,7 @@ body {
 /* 💖 Animación de corazones flotando */
 @keyframes floatingHearts {
   0% {
-    transform: translateY(0) scale(0.8);
+    transform: translateY(-20px) scale(0.8);
     opacity: 1;
   }
   100% {
@@ -288,11 +288,3 @@ audio {
   }
 }
 
-/* 💖 Estilos para corazones flotantes */
-.heart {
-  position: absolute;
-  color: red;
-  font-size: 24px;
-  opacity: 0;
-  animation: floatingHearts 3s linear forwards;
-}
