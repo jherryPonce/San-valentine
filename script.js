@@ -89,7 +89,6 @@ const enableAudioOnInteraction = () => {
 //PORTADA
 
 document.getElementById("generarEnlace").addEventListener("click", function () {
-  
   const nombre = document.getElementById("nombreInput").value.trim();
   const numero = document.getElementById("numeroInput").value.trim();
 
@@ -98,14 +97,12 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
     return;
   }
 
-
   if (numero.startsWith("0")) {
     numero = numero.substring(1); // Elimina el primer "0"
   } else if (numero.startsWith("+")) {
     numero = numero.substring(1); // Elimina el "+"
   }
 
- 
   // Formatear nombre para URL
   const nombreFormateado = encodeURIComponent(nombre.replace(/\s+/g, "-"));
 
@@ -130,16 +127,17 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
   document
     .getElementById("enviarWhatsApp")
     .addEventListener("click", function () {
-      console.log(numero)
+      console.log(numero);
       const mensaje = `💖 ¡Hola, ${nombreFormateado} ! 💖\n\n✨ Quiero compartir contigo algo muy especial ✨\n\n🌹 Este enlace está lleno de amor y cariño, creado solo para ti: ${enlaceFinal} 💌\n\n😍 Espero que te guste tanto como me gustas tú. ❤️`;
       const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(
         mensaje
       )}`;
       window.open(whatsappUrl, "_blank");
 
-     
       nombre.value = "";
       numero.value = "";
+      document.getElementById("nombreInput").value = "";
+      document.getElementById("numeroInput").value = "";
     });
 });
 
