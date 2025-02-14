@@ -89,6 +89,7 @@ const enableAudioOnInteraction = () => {
 //PORTADA
 
 document.getElementById("generarEnlace").addEventListener("click", function () {
+  
   const nombre = document.getElementById("nombreInput").value.trim();
   const numero = document.getElementById("numeroInput").value.trim();
 
@@ -136,8 +137,9 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
       )}`;
       window.open(whatsappUrl, "_blank");
 
-      nombre.reset();
-      numero.reset();
+     
+      nombre.value = "";
+      numero.value = "";
     });
 });
 
