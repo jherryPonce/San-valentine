@@ -129,6 +129,7 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
   document
     .getElementById("enviarWhatsApp")
     .addEventListener("click", function () {
+      console.log(numero)
       const mensaje = `💖 ¡Hola, ${nombreFormateado} ! 💖\n\n✨ Quiero compartir contigo algo muy especial ✨\n\n🌹 Este enlace está lleno de amor y cariño, creado solo para ti: ${enlaceFinal} 💌\n\n😍 Espero que te guste tanto como me gustas tú. ❤️`;
       const whatsappUrl = `https://wa.me/${numero}?text=${encodeURIComponent(
         mensaje
