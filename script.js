@@ -123,6 +123,7 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
     enlaceElemento.textContent = enlaceFinal;
   }, 1500); // Simulación de carga
 
+  
   // Enviar por WhatsApp
   document
     .getElementById("enviarWhatsApp")
