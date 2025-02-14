@@ -137,8 +137,6 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
       )}`;
       window.open(whatsappUrl, "_blank");
 
-      nombre.reset();
-      numero.reset();
     });
 });
 
