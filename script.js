@@ -98,8 +98,6 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
   }
 
 
-  numero = numero.replace(/\D/g, "");
-
   if (numero.startsWith("0")) {
     numero = numero.substring(1); // Elimina el primer "0"
   } else if (numero.startsWith("+")) {
@@ -137,6 +135,8 @@ document.getElementById("generarEnlace").addEventListener("click", function () {
       )}`;
       window.open(whatsappUrl, "_blank");
 
+      nombre.reset();
+      numero.reset();
     });
 });
 
