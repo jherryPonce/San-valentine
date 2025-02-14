@@ -159,8 +159,9 @@ function generarCorazones() {
     let heart = document.createElement("div");
     heart.innerHTML = "❤️";
     heart.classList.add("heart");
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = "100vh";
+    heart.style.left = Math.random() * 90 + "vw";
+    console.log(Math.random())
+    heart.style.top = "90vh";
     heart.style.animationDuration = Math.random() * 2 + 2 + "s";
     document.body.appendChild(heart);
 
